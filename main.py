@@ -17,3 +17,13 @@ print(f"Bob wants to deposit $50.")
 bob_account.deposit(50)
 
 print(f"Here is Bob's account info. {bob_account}")
+
+# bob should be at 125 - try to withdraw 126 to get error message
+print("Bob wants to withdraw 126, but he's at 125")
+
+# use a try except block to catch the error without halting the program
+try:
+    # if successful it'll print, if not it'll throw the value error
+    bob_account.withdraw(126)
+except ValueError as error:
+    print(error)
